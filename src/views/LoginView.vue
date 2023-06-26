@@ -253,7 +253,7 @@ export default {
         this.wasAprove = true
         const options = {
           method: 'POST',
-          url: 'http://127.0.0.1:5050/bendecidos',
+          url: import.meta.env.VITE_BACK_URL + 'bendecidos',
           headers: { 'Content-Type': 'application/json' },
           data: {
             name: this.$route.query.name,

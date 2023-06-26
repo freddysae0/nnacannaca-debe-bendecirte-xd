@@ -137,7 +137,7 @@ export default {
       this.userInput = !this.userInput
     },
     async loadData() {
-      const options = { method: 'GET', url: 'http://127.0.0.1:5050/bendecidos' }
+      const options = { method: 'GET', url: import.meta.env.VITE_BACK_URL + 'bendecidos' }
       await axios
         .request(options)
         .then((response) => {
